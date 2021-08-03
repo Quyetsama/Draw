@@ -9,7 +9,7 @@ function setup(){
     cv.background(0)
 
     // Start the socket connection
-	socket = io.connect('http://localhost:3000')
+	socket = io.connect('https://realtime-draw.herokuapp.com')
 
     // Callback function
 	socket.on('mouse', data => {
@@ -68,3 +68,4 @@ function sendmouse(x, y, pX, pY) {
 
 	socket.emit('mouse', data)
 }
+
